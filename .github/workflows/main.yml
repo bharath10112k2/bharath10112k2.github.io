@@ -1,0 +1,29 @@
+name: My Workflow
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: 21f1002973@ds.study.iitm.ac.in's Step # Step named after your email
+        run: echo "This step is named after your email address."
+      
+      - name: Run a one-line script
+        run: echo Hello, world!
+      
+      - name: Multiline script
+        run: |
+          echo "A multiline script"
+          echo "This is the second line"
